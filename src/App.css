@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500,700;1,500&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* header */
+header {
+  color: #4F4F4F;
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header>span {
+  /* font: 'Raleway'; */
+  margin-left: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+img {
+  margin-left: 5px;
+  max-width: 1.5%;
+}
+
+
+/* Quote section */
+main {
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.quote {
+  font-size: 36px;
+  color: black;
+  max-width: 590px;
+  margin-top: 10%;
+  border-left: 6px solid #F7DF94;
+  padding-left: 9%;
+  line-height: 37px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.author {
+  margin-top: 100px;
+  margin-left: 11%;
+}
+
+.quote_author {
+  font-size: 25px;
+  font-weight: 700;
+  color: #4F4F4F;
+  margin-bottom: 5px;
+}
+
+.quote_genre {
+  color: #828282;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 5px;
 }
