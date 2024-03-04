@@ -11,15 +11,16 @@ header {
   margin-top: 30px;
 }
 
-header>span {
-  margin-left: 80%;
-}
-
 header>button {
   background: none;
-  margin-left: 5px;
+  margin-left: 80%;
   max-width: fit-content;
   border: none;
+}
+
+header>button:hover {
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 span.material-symbols-outlined {
@@ -45,15 +46,29 @@ main {
 
 .author {
   margin-top: 100px;
-  margin-left: 11%;
+  margin-left: 8%;
+  padding: 3%;
+  color: #4F4F4F;
   /* border: 1px solid black; */
+  display: flex;
+}
+
+.forward_button {
+  display: inline-block;
+  margin-left: 65%;
+  align-self: center;
 }
 
 .quote_author {
   font-size: 25px;
   font-weight: 700;
-  color: #4F4F4F;
+  color: inherit;
   margin-bottom: 5px;
+}
+
+.author:hover {
+  background-color: #4F4F4F;
+  color: azure;
 }
 
 .quote_genre {

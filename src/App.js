@@ -25,8 +25,8 @@ function App() {
   function Header() {
     return (
       <header className="App-header">
-        <span>random</span>
         <button onClick={fetchQuote}>
+          <span>random</span>
           <span class="material-symbols-outlined"> autorenew </span>
         </button>
       </header>
@@ -43,8 +43,13 @@ function Quote(props) {
         </p>
       </div>
       <div className='author'>
-        <p className='quote_author'>{props.quoteAuthor}</p>
-        <p className='quote_genre'>{props.quoteGenre}</p>
+        <div>
+          <p className='quote_author'>{props.quoteAuthor}</p>
+          <p className='quote_genre'>{props.quoteGenre}</p>
+        </div>
+        <div className='forward_button'>
+          <span class="material-symbols-outlined">arrow_right_alt</span>
+        </div>
       </div>
     </main >
   );
