@@ -1,25 +1,52 @@
 import './App.css';
-import refreshIcon from './refresh.png';
+import { useState } from 'react';
 
 function App() {
+  const [quote, setQuote] = useState("");
+  const [quoteAuthor, setQuoteAuthor] = useState("");
+  const [quoteGenre, setQuoteGenre] = useState("");
+
+  const fetchQuote = async () => {
+    const response = await fetch("https://quote-garden.onrender.com/api/v3/quotes/random");
+    const data = await response.json();
+    setQuote(data.data[0].quoteText);
+    setQuoteAuthor(data.data[0].quoteAuthor);
+    setQuoteGenre(data.data[0].quoteGenre);
+  };
+  // fetchQuote();
+
   return (
     <div className="App">
+      <Header />
+      <Quote quote={quote} quoteAuthor={quoteAuthor} quoteGenre={quoteGenre} />
+    </div>
+  );
+
+  function Header() {
+    return (
       <header className="App-header">
         <span>random</span>
-        <img src={refreshIcon} alt='refresh' />
+        <button onClick={fetchQuote}>
+          <span class="material-symbols-outlined"> autorenew </span>
+        </button>
       </header>
-      <main>
-        <div>
-          <p className='quote'>
-            "The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency."
-          </p>
-        </div>
-        <div className='author'>
-          <p className='quote_author'>Bill Gates</p>
-          <p className='quote_genre'>business</p>
-        </div>
-      </main >
-    </div>
+    );
+  }
+}
+
+function Quote(props) {
+  return (
+    <main>
+      <div>
+        <p className='quote'>
+          {props.quote}
+        </p>
+      </div>
+      <div className='author'>
+        <p className='quote_author'>{props.quoteAuthor}</p>
+        <p className='quote_genre'>{props.quoteGenre}</p>
+      </div>
+    </main >
   );
 }
 

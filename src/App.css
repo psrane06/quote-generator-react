@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500,700;1,500&display=swap');
-
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -14,15 +12,19 @@ header {
 }
 
 header>span {
-  /* font: 'Raleway'; */
   margin-left: 80%;
 }
 
-img {
+header>button {
+  background: none;
   margin-left: 5px;
-  max-width: 1.5%;
+  max-width: fit-content;
+  border: none;
 }
 
+span.material-symbols-outlined {
+  font-size: large;
+}
 
 /* Quote section */
 main {
@@ -32,9 +34,9 @@ main {
 }
 
 .quote {
-  font-size: 36px;
+  font-size: 35px;
   color: black;
-  max-width: 590px;
+  max-width: 600px;
   margin-top: 10%;
   border-left: 6px solid #F7DF94;
   padding-left: 9%;
@@ -44,6 +46,7 @@ main {
 .author {
   margin-top: 100px;
   margin-left: 11%;
+  /* border: 1px solid black; */
 }
 
 .quote_author {
