@@ -27,6 +27,12 @@ span.material-symbols-outlined {
   font-size: large;
 }
 
+/* .App {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+} */
+
 /* Quote section */
 main {
   display: grid;
@@ -44,7 +50,13 @@ main {
   line-height: 37px;
 }
 
+.author_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .author {
+  width: 45%;
   margin-top: 100px;
   margin-left: 8%;
   padding: 3%;
