@@ -27,16 +27,9 @@ span.material-symbols-outlined {
   font-size: large;
 }
 
-/* .App {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-} */
-
 /* Quote section */
-main {
+.quote_wrapper {
   display: grid;
-  justify-content: center;
   align-items: center;
 }
 
@@ -46,8 +39,9 @@ main {
   max-width: 600px;
   margin-top: 10%;
   border-left: 6px solid #F7DF94;
-  padding-left: 9%;
+  padding-left: 6%;
   line-height: 37px;
+  justify-self: center;
 }
 
 .author_wrapper {
@@ -57,12 +51,12 @@ main {
 
 .author {
   width: 45%;
-  margin-top: 100px;
-  margin-left: 8%;
-  padding: 3%;
+  margin-top: 50px;
+  padding: 2%;
   color: #4F4F4F;
   /* border: 1px solid black; */
   display: flex;
+  cursor: pointer;
 }
 
 .forward_button {
@@ -88,4 +82,9 @@ main {
   font-size: 12px;
   line-height: 15px;
   margin-top: 5px;
+}
+
+.all_quotes_wrapper {
+  display: grid;
+  justify-content: center;
 }
